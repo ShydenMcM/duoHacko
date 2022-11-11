@@ -4,6 +4,7 @@ import calendar
 
 import requests
 
+times_to_run = 300
 BASE_URL = "https://www.duolingo.com/"
 COOKIE = (
 'lang=en; duocsexp0=web_delight_use_fetch_v3~control~; lu=https://www.duolingo.com/; initial_referrer=https://www.google.com/; lp=splash; _gcl_au=1.1.262744943.1668019832; FPC=6bfe8578-c77e-4912-b2f7-20328d8ae4c9; _ga=GA1.2.2122913171.1668019833; _gid=GA1.2.952735997.1668019833; __adal_ca=so=Google&me=organic&ca=(not%20set)&co=(not%20set)&ke=(not%20set); __adal_cw=1668019832795; G_ENABLED_IDPS=google; lr=; csrf_token=ImVlZDc1M2QyZWI3ZjRjMGI4NTRjODU5MWM5NWE0MTQxIg==; logged_out_uuid=509830122; logged_in=true; OptanonAlertBoxClosed=2022-11-09T18:50:39.458Z; wuuid=38a419c0-0971-44a5-96b6-6192c2d543fd; __adal_ses=*; jwt_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjYzMDcyMDAwMDAsImlhdCI6MCwic3ViIjo1MDk4MzAxMjJ9.JX4b7xHKnNoqZiQK0YrVZYVOt98TVh2WCCEZTngdgeY; tsl=1668078342060; OptanonConsent=isGpcEnabled=0&datestamp=Thu+Nov+10+2022+11:05:42+GMT+0000+(Greenwich+Mean+Time)&version=6.16.0&isIABGlobal=false&consentId=ad8261bf-53c4-423b-b12d-abe8145adf04&interactionCount=1&landingPath=NotLandingPage&groups=C0001:1,C0002:1,C0003:1,C0004:1&hosts=H3:1,H14:1,H11:1,H1:1,H15:1,H6:1,H22:1,H2:1,H7:1,H16:1,H9:1,H18:1,H10:1,H12:1,H13:1&geolocation=GB;ENG&AwaitingReconsent=false; __adal_id=38cb20d5-4537-40c1-9efc-d6ea0e6769c5.1668019833.5.1668078345.1668071465.64fcb70c-d9d0-4809-9a64-ee4f6f1b0305; AWSALB=MgG5MtisDPYb5Di0e3r7OKUvrd2QkuACsfX9c0KNjmpq3N22DGX96cQNN9ldQUybb0XRYFesoUkbI8uH09dCBZ/sVqCAM9a6G4Rm3fLqc3gwTpw1VX4JTpY4VN8J; AWSALBCORS=MgG5MtisDPYb5Di0e3r7OKUvrd2QkuACsfX9c0KNjmpq3N22DGX96cQNN9ldQUybb0XRYFesoUkbI8uH09dCBZ/sVqCAM9a6G4Rm3fLqc3gwTpw1VX4JTpY4VN8J; _gat_UA-21595814-1=1'
@@ -49,5 +50,6 @@ def main():
 
 
 if __name__ == "__main__":
-    while True:
+    while times_to_run != 0:
+        times_to_run -= 1
         main()
